@@ -79,7 +79,7 @@
   selector.useTableIndex      = YES;
   selector.useRecentItems     = YES;
   selector.maxNumberOfRecentItems = 4;
-  selector.allowModeButtons = NO;
+  selector.allowModeButtons = YES;
   UINavigationController * uinav = [[UINavigationController alloc] initWithRootViewController:selector];
   uinav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
   uinav.modalPresentationStyle = UIModalPresentationFormSheet;
