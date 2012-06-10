@@ -225,7 +225,7 @@
   static NSString *CellIdentifier = @"KNSelectorItemCell";
   UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
   }
 
   // Which item?
@@ -236,6 +236,13 @@
   if (item.imageUrl) {
     [cell.imageView setImageWithURL:[NSURL URLWithString:item.imageUrl] placeholderImage:[UIImage imageNamed:@"KNDefaultImage"]];
   }
+
+  if (item.detailValue) {
+    cell.detailTextLabel.text = item.detailValue;
+  } else {
+    cell.detailTextLabel.text = nil;
+  }
+  
   cell.accessoryType = item.selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 
   return cell;

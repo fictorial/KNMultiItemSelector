@@ -10,6 +10,7 @@
 
 @property (strong,nonatomic) NSString * displayValue;
 @property (strong,nonatomic) NSString * selectValue;
+@property (strong,nonatomic) NSString * detailValue;
 @property (strong,nonatomic) NSString * imageUrl;
 @property (nonatomic) BOOL selected;
 
@@ -19,6 +20,11 @@
 // Init with a display value that is different from actual value and with optional image
 -(id)initWithDisplayValue:(NSString*)displayVal
               selectValue:(NSString*)selectVal
+                 imageUrl:(NSString*)image;
+
+-(id)initWithDisplayValue:(NSString*)displayVal
+              selectValue:(NSString*)selectVal
+              detailValue:(NSString*)detailVal
                  imageUrl:(NSString*)image;
 
 // You can use these to sort items using [NSArray sortedArrayUsingSelector:]

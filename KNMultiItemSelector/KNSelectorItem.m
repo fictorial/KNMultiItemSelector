@@ -10,7 +10,7 @@
 
 @implementation KNSelectorItem
 
-@synthesize displayValue, selectValue, imageUrl, selected;
+@synthesize displayValue, selectValue, detailValue, imageUrl, selected;
 
 -(id)initWithDisplayValue:(NSString*)displayVal {
   return [self initWithDisplayValue:displayVal selectValue:displayVal imageUrl:nil];
@@ -19,9 +19,17 @@
 -(id)initWithDisplayValue:(NSString*)displayVal
               selectValue:(NSString*)selectVal
                  imageUrl:(NSString*)image {
+  return [self initWithDisplayValue:displayVal selectValue:displayVal detailValue:nil imageUrl:nil];
+}
+
+-(id)initWithDisplayValue:(NSString*)displayVal
+              selectValue:(NSString*)selectVal
+              detailValue:(NSString *)detailVal
+                 imageUrl:(NSString*)image {
   if ((self=[super init])) {
     self.displayValue = displayVal;
     self.selectValue = selectVal;
+    self.detailValue = detailVal;
     self.imageUrl = image;
   }
   return self;

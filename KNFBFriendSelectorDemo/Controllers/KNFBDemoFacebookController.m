@@ -58,6 +58,7 @@
   for (NSDictionary * f in dataArray) {
     [friends addObject:[[KNSelectorItem alloc] initWithDisplayValue:[f objectForKey:@"name"]
                                                         selectValue:[f objectForKey:@"id"]
+                                                        detailValue:[f objectForKey:@"id"]
                                                            imageUrl:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", [f objectForKey:@"id"]]]];
   }
   [friends sortUsingSelector:@selector(compareByDisplayValue:)];
