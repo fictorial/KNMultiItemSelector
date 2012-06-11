@@ -17,15 +17,15 @@
 }
 
 -(id)initWithDisplayValue:(NSString*)displayVal
-              selectValue:(NSString*)selectVal
+              selectValue:(id)selectVal
                  imageUrl:(NSString*)image {
   return [self initWithDisplayValue:displayVal selectValue:displayVal detailValue:nil imageUrl:nil];
 }
 
--(id)initWithDisplayValue:(NSString*)displayVal
-              selectValue:(NSString*)selectVal
+-(id)initWithDisplayValue:(NSString *)displayVal
+              selectValue:(id)selectVal
               detailValue:(NSString *)detailVal
-                 imageUrl:(NSString*)image {
+                 imageUrl:(NSString *)image {
   if ((self=[super init])) {
     self.displayValue = displayVal;
     self.selectValue = selectVal;
